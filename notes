@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valentine's Day Love Notes</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #ffe6f0;
+      color: #b30047;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 50px auto;
+      background: #fff;
+      border: 2px solid #ff80bf;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #e6005c;
+      margin-bottom: 10px;
+    }
+
+    .love-note {
+      font-size: 1.5rem;
+      margin: 20px 0;
+      min-height: 50px;
+    }
+
+    button {
+      background-color: #ff66a3;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1.2rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #e6005c;
+    }
+
+    footer {
+      margin-top: 20px;
+      font-size: 0.9rem;
+      color: #800040;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Valentine's Love Notes</h1>
+    <div class="love-note" id="love-note">Click the button for a love note!</div>
+    <button onclick="generateLoveNote()">Give Me Love!</button>
+  </div>
+  <footer>
+    Made with ❤ for Valentine's Day by your girlfriend
+  </footer>
+
+  <script>
+    const loveNotes = [
+      "You make my heart skip a beat",
+      "I am yours",
+      "You are precious to me",
+      "Your heart is my home",
+      "So much, forever",
+      "Every day with you feels like Valentine's Day",
+      "You light up my life in the most beautiful way",
+      "You are my favorite reason to smile",
+      "I love you to the moon and back",
+      "You're my best friend",
+      "Being with you is my favorite place to be",
+      "I'm so proud of you",
+      "You are the best thing that ever happened to me",
+      "I looooooooovvvvvvvvvvvveeeeeeeeeee yoooooooouuuuuuuuuuuu"
+    ];
+
+    function generateLoveNote() {
+      const randomIndex = Math.floor(Math.random() * loveNotes.length);
+      document.getElementById('love-note').innerText = loveNotes[randomIndex];
+    }
+  </script>
+</body>
+</html>
